@@ -1,0 +1,8 @@
+<!--- TEMPLATENAME: SimpleFormResponse.isml --->
+Here is the data from the SimpleForm
+<br>
+Name: ${pdict.CurrentForms.simpleform.name.htmlValue}
+<br>
+EmailAddress: ${pdict.CurrentForms.simpleform.emailaddress.htmlValue}
+<br>
+Message: ${pdict.CurrentForms.simpleform.message.htmlValue}

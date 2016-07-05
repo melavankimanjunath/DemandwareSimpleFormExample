@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<form>
+	<field formid="name" label="Name" type="string" mandatory="true" missing-error="Name is needed"/>
+	<field formid="emailaddress" label="Email Address" type="string" mandatory="true" regexp="^[\w-\.]{1,}\@([\da-zA-Z-]{1,}\.){1,}[\da-zA-Z-]{2,3}$" value-error="Invalid Email Address"/>
+	<field formid="message" label="Message" type="string" mandatory="true"/>
+	<action formid="send" valid-form="true"/>
+		
+</form>

@@ -1,0 +1,18 @@
+<isinclude template="util/modules">
+				<form action="${URLUtils.httpsContinue()}" method="post" id="${pdict.CurrentForms.simpleform.htmlName}">
+					<table  border="0">
+						<tr>
+								<isinputfield formfield="${pdict.CurrentForms.simpleform.name}" value="${pdict.CurrentForms.simpleform.name.htmlValue}" type="input">
+						</tr>
+						<tr>
+								<isinputfield formfield="${pdict.CurrentForms.simpleform.emailaddress}" value="${pdict.CurrentForms.simpleform.emailaddress.htmlValue}" type="input">
+						</tr>
+						<tr>
+								<isinputfield formfield="${pdict.CurrentForms.simpleform.message}" type="textarea" attribute1="rows" attribute2="cols" value1="6" value2="50">
+						</tr>
+				</table>
+							<input class="image imageright" type="image" src="${URLUtils.staticURL('/images/cont_bttn.gif')}" value="Send" name="${pdict.CurrentForms.simpleform.send.htmlName}" />
+				</form>
+
+				
+				
