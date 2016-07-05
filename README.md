@@ -5,7 +5,7 @@ This is a quick example on how to create a Demandware Form and how to use form v
 
 First you need to create a Demandware Form object. This is done by creating a form definition, which is an xml file
 that is placed in the forms directory in the cartridge.
-
+```
 <?xml version="1.0"?>
 <form>
     <field formid="name" label="Name" type="string" mandatory="true" missing-error="You Name is Mandatory"/>
@@ -13,7 +13,7 @@ that is placed in the forms directory in the cartridge.
     <field formid="message" label="Message" type="string" mandatory="true"/>
     <action formid="send" valid-form="true"/>
 </form>
-
+```
 In the form definition you define the fields for the form. You provide formid, the form label, and the type. You can also specify if the field is mandatory, error conditions and messages.
 Any form validation that you provide in the definition of the form will automatically be performed by the framework. For example all the fields above have the mandatory attribute set to
 true. For the name field I have defined the message that will be provided if the form is submitted without a name value.
@@ -23,7 +23,7 @@ Once you have a form defined, you need to create an ISML template to render the 
 the response data from the form.
 
 Here is the template to load the form:
-
+```
 <isinclude template="util/modules">
 <form action="${URLUtils.httpsContinue()}" method="post" id="${pdict.CurrentForms.simpleform.htmlName}">
 <table  border="0">
@@ -39,7 +39,7 @@ Here is the template to load the form:
 </table>
     <input class="image imageright" type="image" src="${URLUtils.staticURL('/images/cont_bttn.gif')}" value="Send" name="${pdict.CurrentForms.simpleform.send.htmlName}" />
 </form>
-
+```
 
 The fields are rendered using the isinputfield ISML tag. The isinputfield tag handles all the validation and rendering of any messages that are defined in the forms xml file.
 Once the Send button is clicked, form validation is called. If the form passes the validation configured in the forms xml file, then the action will be set to send, and in the case of this pipeline,
